@@ -15,10 +15,6 @@ export default {
         black: {
           400: "#333333"
         },
-        gray: {
-          400: '#F6F6F6',
-          'hover': '#DFDFDF'
-        }
       }
     },
   },
