@@ -1,5 +1,6 @@
 import { UserCircle } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { Container } from "./container";
 
 export function Header() {
   const [screenWidth, setScreenWidth] = useState<number>(0);
@@ -9,7 +10,7 @@ export function Header() {
     setScreenWidth(window.innerWidth);
   }, []);
   return (
-    <header className="flex items-center justify-between p-4 pb-8 max-w-[1440px] mx-auto">
+    <Container as="header" className="flex items-center justify-between pb-8 md:pb-10 pt-4 md:pt-6 xl:pt-8">
       <img src="/logo-dark.png" alt="logo" />
 
       <div className="flex items-center gap-4">
@@ -25,10 +26,10 @@ export function Header() {
         }
 
         <div className="flex items-center gap-2">
-          <span className="font-bold">John Doe</span>
+          {isScreenWidthGreatherThan744 && <span className="font-bold">John Doe</span>}
           <UserCircle size={32} weight="fill" />
         </div>
       </div>
-    </header>
+    </Container>
   );
 }
