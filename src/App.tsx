@@ -1,9 +1,8 @@
-import { Container } from "./components/container";
 import { Header } from "./components/header";
-import { UserInfoCard } from "./components/userInfoCard";
+import { Container } from "./components/container";
+import { CardsListSection } from "./components/CardsListSection";
 
 export default function App() {
-
   return (
     <>
       <Header />
@@ -13,7 +12,7 @@ export default function App() {
         <p>Veja os candidatos que aplicaram para a sua vaga</p>
       </Container>
 
-      <ul><UserInfoCard /></ul>
+      <CardsListSection />
     </>
   )
 }
