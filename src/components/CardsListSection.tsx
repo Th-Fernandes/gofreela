@@ -10,7 +10,10 @@ export function CardsListSection() {
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">  
         {
           users?.map((user) => (
-            <UserInfoCard key={user.login.uuid}/>
+            <UserInfoCard 
+              key={user.login.uuid}
+              {...user}
+            />
           ))
         }
       </ul>
