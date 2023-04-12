@@ -21,9 +21,9 @@ export function Header() {
         {
           isScreenWidthGreatherThan744 && (
             <nav className="flex gap-3">
-              <ul> <a href="#">Página inicial</a> </ul>
-              <ul> <a href="#">Ver Vagas</a> </ul>
-              <ul> <a href="#">Criar Vagas</a> </ul>
+              <ul> <a href="#" className="hover:font-bold transition-all">Página inicial</a> </ul>
+              <ul> <a href="#" className="hover:font-bold transition-all">Ver Vagas</a> </ul>
+              <ul> <a href="#" className="hover:font-bold transition-all">Criar Vagas</a> </ul>
             </nav>
             )
         }
