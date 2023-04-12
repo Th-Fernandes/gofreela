@@ -1,13 +1,16 @@
 import { UserCircle } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Container } from "./container";
+import { useResizeDebounce } from "../hooks/useResizeDebounce";
 
 export function Header() {
   const [screenWidth, setScreenWidth] = useState<number>(0);
+  const resizeDebounce = useResizeDebounce(() => setScreenWidth(window.innerWidth));
   const isScreenWidthGreatherThan744 =  screenWidth > 744;
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
+    resizeDebounce();
   }, []);
   return (
     <Container as="header" className="flex items-center justify-between pb-8 md:pb-10 pt-4 md:pt-6 xl:pt-8">
