@@ -15,7 +15,7 @@ export interface users {
       uuid: string;
     }
     phone: string;
-    cellphone: string;
+    cell: string;
     picture: {
       large: string;
       medium: string;
