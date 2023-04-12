@@ -5,7 +5,22 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ['Quicksand', 'sans-serif'] 
+    },
+
+
+    extend: {
+      colors: {
+        black: {
+          400: "#333333"
+        },
+        gray: {
+          400: '#F6F6F6',
+          'hover': '#DFDFDF'
+        }
+      }
+    },
   },
   plugins: [],
 }
